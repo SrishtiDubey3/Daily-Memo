@@ -1,0 +1,164 @@
+@import url('https//fonts.googlespis.com/css2?family=Poppins:wght@200;300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    /* font-family:'Courier New', Courier, monospace; */
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(115deg, #242222, #a42e2e);  /* gradient effect*/
+    padding: 10px;
+}
+
+.todo{
+    width: 100%;
+    max-width: 540px;
+    background: #181717;
+    margin: 100px auto 20px;  /* centers the todo container */
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    color: #ffffff;
+    box-shadow: -10px -10px 25px 1px rgb(71, 5, 7);
+}
+
+.todo h2{
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.todo h2 img{
+    width: 60px;
+    margin-left: 10px;
+}
+
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 15px;
+    margin-bottom: 25px;
+}
+
+input{
+    flex: 1; /* takes the full width */
+    border: none; /* the border lines disappear*/
+    outline: none; /* the outline disappear*/
+    background: transparent;
+    font-weight: 16px;
+}
+
+button{
+    border: none;  /* the border lines disappear*/
+    outline: none; /* the outline disappear*/
+    padding: 16px 50px;
+    background: #de321f;
+    color: #ffffff;
+    font-size: 16px;
+    border-radius: 40px;
+    cursor: pointer; /* changes mouse cursor to hand */
+}
+
+button:hover{
+    transform: scale(1.03); 
+}
+
+ul li{
+    list-style: none; /* bullet points will be removed */
+    font-size: 16px;
+    padding: 17px 8px 12px 50px; /* padding b/w each task */
+    user-select: none;
+    cursor: pointer;
+    position: relative; /*this is done to align the circles with the corresponding text*/
+}
+
+ul li::before{   /* pseudo element */
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(unchecked.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
+}
+
+ul li.checked{
+    color: #a4a0a0;
+    text-decoration: line-through;
+
+}
+
+ul li.checked:before{
+    background-image: url(checked.png);
+}
+
+ul li span{
+    position: absolute;
+    right: 0px;
+    top: 9.5px;
+    width: 40px;
+    height: 36px;
+    font-size: 20px;
+    color: #959595;
+    line-height: 34.4px;
+    text-align: center;
+}
+
+ul li span:hover{
+    background: #352f2f;   
+    border-radius: 100%;
+    color: #edeef0;
+}
+
+
+
+/* .subcontainer{
+    min-height: 30vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.subcontainer .text{
+    position: relative;
+    color: #edeef0;
+    font-size: 30px;
+    font-weight: 700;
+}
+
+.container .subcontainer .text.first-text{
+    color: #ff270f;
+}
+
+.text.second-text{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: linear-gradient(115deg, #242222, #a42e2e);
+    background-color: #a4a0a0;  -- comment --
+    border-left: 2px solid white;
+    animation: animate 4s steps(12) infinite;
+}
+
+@keyframes animate{
+    40%, 60%{
+        left: 100%;
+    }
+    100%{
+        left: 0%;
+    }
+} */
